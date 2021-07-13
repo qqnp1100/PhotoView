@@ -24,7 +24,7 @@ afterEvaluate {
 
                 group = 'com.github.chrisbanes'
                 artifactId = 'PhotoView'
-                version = '2.4.1'
+                version = '2.4.2'
 
                 // Adds javadocs and sources as separate jars.
                 artifact androidJavadocsJar

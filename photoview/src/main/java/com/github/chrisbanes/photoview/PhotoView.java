@@ -268,11 +268,11 @@ public class PhotoView extends AppCompatImageView {
         return attacher.getCustomScaleType();
     }
 
-    public boolean isVerticalScrollTop() {
-        return attacher.isVerticalScrollTop();
+    public int getVerticalScrollEdge() {
+        return attacher.getVerticalScrollEdge();
     }
 
-    public boolean isVerticalScrollBottom() {
-        return attacher.isVerticalScrollBottom();
+    public int getHorizontalScrollEdge() {
+        return attacher.getHorizontalScrollEdge();
     }
 }
