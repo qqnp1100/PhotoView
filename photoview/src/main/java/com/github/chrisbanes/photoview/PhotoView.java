@@ -263,4 +263,16 @@ public class PhotoView extends AppCompatImageView {
     public void clearCustomScaleType() {
         attacher.setCustomScaleType(PhotoViewAttacher.CUSTOM_SCALE_TYPE_NONE);
     }
+
+    public int getCustomScaleType() {
+        return attacher.getCustomScaleType();
+    }
+
+    public boolean isVerticalScrollTop() {
+        return attacher.isVerticalScrollTop();
+    }
+
+    public boolean isVerticalScrollBottom() {
+        return attacher.isVerticalScrollBottom();
+    }
 }

@@ -20,7 +20,6 @@ import android.graphics.Matrix;
 import android.graphics.Matrix.ScaleToFit;
 import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
-import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
@@ -503,6 +502,18 @@ public class PhotoViewAttacher implements View.OnTouchListener,
 
     public void setCustomScaleType(int customScaleType) {
         this.customScaleType = customScaleType;
+    }
+
+    public int getCustomScaleType() {
+        return customScaleType;
+    }
+
+    public boolean isVerticalScrollTop() {
+        return mVerticalScrollEdge == VERTICAL_EDGE_TOP;
+    }
+
+    public boolean isVerticalScrollBottom() {
+        return mVerticalScrollEdge == VERTICAL_EDGE_BOTTOM;
     }
 
     public void update() {
