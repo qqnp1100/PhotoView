@@ -93,6 +93,7 @@ public class PhotoView extends AppCompatImageView {
 
     @Override
     public void setScaleType(ScaleType scaleType) {
+        clearCustomScaleType();
         if (attacher == null) {
             pendingScaleType = scaleType;
         } else {
@@ -158,7 +159,8 @@ public class PhotoView extends AppCompatImageView {
         attacher.getDisplayMatrix(matrix);
     }
 
-    @SuppressWarnings("UnusedReturnValue") public boolean setDisplayMatrix(Matrix finalRectangle) {
+    @SuppressWarnings("UnusedReturnValue")
+    public boolean setDisplayMatrix(Matrix finalRectangle) {
         return attacher.setDisplayMatrix(finalRectangle);
     }
 
@@ -252,5 +254,13 @@ public class PhotoView extends AppCompatImageView {
 
     public void setOnSingleFlingListener(OnSingleFlingListener onSingleFlingListener) {
         attacher.setOnSingleFlingListener(onSingleFlingListener);
+    }
+
+    public void setCustomScaleFillWidthTop() {
+        attacher.setCustomScaleType(PhotoViewAttacher.CUSTOM_SCALE_TYPE_FILL_WIDTH_TOP);
+    }
+
+    public void clearCustomScaleType() {
+        attacher.setCustomScaleType(PhotoViewAttacher.CUSTOM_SCALE_TYPE_NONE);
     }
 }

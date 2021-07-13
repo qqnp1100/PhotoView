@@ -1,3 +1,24 @@
+# 本分支修改内容
+- 增加setCustomScaleFillWidthTop方法，类微博长图置顶显示
+
+# 本分支集成方式
+
+Step 1. Add the JitPack repository to your build file
+Add it in your root build.gradle at the end of repositories:
+
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://www.jitpack.io' }
+		}
+	}
+Step 2. Add the dependency [![](https://jitpack.io/v/qqnp1100/PhotoView.svg)](https://jitpack.io/#qqnp1100/PhotoView)
+
+	dependencies {
+            //请自行改为最新版本
+	        implementation 'com.github.qqnp1100:PhotoView:1.0.0'
+	}
+
 # PhotoView
 PhotoView aims to help produce an easily usable implementation of a zooming Android ImageView.
 

@@ -16,16 +16,16 @@
 package com.github.chrisbanes.photoview.sample;
 
 import android.os.Bundle;
-
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
-
-import com.github.chrisbanes.photoview.PhotoView;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
+
+import com.github.chrisbanes.photoview.PhotoView;
 
 public class ViewPagerActivity extends AppCompatActivity {
 
@@ -39,8 +39,8 @@ public class ViewPagerActivity extends AppCompatActivity {
 
     static class SamplePagerAdapter extends PagerAdapter {
 
-        private static final int[] sDrawables = {R.drawable.wallpaper, R.drawable.wallpaper, R.drawable.wallpaper,
-            R.drawable.wallpaper, R.drawable.wallpaper, R.drawable.wallpaper};
+        private static final int[] sDrawables = {R.drawable.wallpaper, R.drawable.ttt, R.drawable.aaa,
+                R.drawable.wallpaper, R.drawable.wallpaper, R.drawable.wallpaper};
 
         @Override
         public int getCount() {
@@ -50,6 +50,11 @@ public class ViewPagerActivity extends AppCompatActivity {
         @Override
         public View instantiateItem(ViewGroup container, int position) {
             PhotoView photoView = new PhotoView(container.getContext());
+            if (position == 1 || position == 2) {
+                photoView.setCustomScaleFillWidthTop();
+            } else {
+                photoView.setScaleType(ImageView.ScaleType.FIT_CENTER);
+            }
             photoView.setImageResource(sDrawables[position]);
             // Now just add PhotoView to ViewPager and return it
             container.addView(photoView, LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
