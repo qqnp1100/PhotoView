@@ -633,6 +633,7 @@ public class PhotoViewAttacher implements View.OnTouchListener,
         final float widthScale = viewWidth / drawableWidth;
         final float heightScale = viewHeight / drawableHeight;
         if (customScaleType == CUSTOM_SCALE_TYPE_FILL_WIDTH_TOP) {
+            mVerticalScrollEdge = VERTICAL_EDGE_TOP;
             mBaseMatrix.postScale(widthScale, widthScale);
             mBaseMatrix.postTranslate((viewWidth - drawableWidth * widthScale) / 2F,
                     0);
